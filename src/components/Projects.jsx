@@ -22,12 +22,14 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4">
+    <section
+     id="projects"
+     className="min-h-screen flex items-center justify-center px-4 py-20 bg-white">
       <h2 className="text-2xl font-bold mb-6">Projects</h2>
 
       <div className="grid gap-6 md:grid-cols-2 max-w-4xl">
         {projects.map((project) => (
-          <div key={project.title} className="border rounded p-4">
+          <div key={project.title} className="border rounded-lg p-4 shadow-md hover:shadow-x1 transition-300">
             <img
               src={project.image}
               alt={project.title}

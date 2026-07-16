@@ -2,7 +2,7 @@ function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col items-center justify-center px-4 text-center"
+      className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center bg-gray-50"
     >
       <h2 className="text-2xl font-bold mb-4">
         Contact Me
@@ -16,7 +16,7 @@ function Contact() {
       <div className="flex flex-col gap-3">
         <a
           href="sheriffopatola@gmail.com"
-          className="border rounded px-6 py-2"
+          className="border border-blue-600 text-blue-600 rounded-lg px-6 py-3 hover:bg-blue-600 hover:text-white transition duration-300"
         >
           📧 Email Me
         </a>
@@ -25,7 +25,7 @@ function Contact() {
           href="https://www.linkedin.com/in/sheriff-opatola-599b2a128"
           target="_blank"
           rel="noreferrer"
-          className="border rounded px-6 py-2"
+          className="border border-blue-600 text-blue-600 rounded-lg px-6 py-3 hover:bg-blue-600 hover:text-white transition duration-300"
         >
           💼 LinkedIn
         </a>
@@ -34,7 +34,7 @@ function Contact() {
           href="https://github.com/BigTrevor1234"
           target="_blank"
           rel="noreferrer"
-          className="border rounded px-6 py-2"
+          className="border border-blue-600 text-blue-600 rounded-lg px-6 py-3 hover:bg-blue-600 hover:text-white transition duration-300"
         >
           💻 GitHub
         </a>

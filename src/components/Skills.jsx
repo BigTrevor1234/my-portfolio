@@ -11,8 +11,10 @@ const skills = [
 
 function Skills() {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4">
-      <h2 className="text-2xl font-bold mb-6">My Skills</h2>
+    <section 
+    id="skills"
+    className="min-h-screen flexi tems-center px-4 py-20 bg-white">
+      <h2 className="text-2xl font-bold mb-6 text-gray-900">My Skills</h2>
 
       <div className="flex flex-wrap gap-3 justify-center">
         {skills.map((skill) => (
