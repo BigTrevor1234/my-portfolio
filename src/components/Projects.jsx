@@ -1,83 +1,111 @@
-import weatherImg from "../assets/weather-app.jpg"
-import glowImg from "../assets/glow-skincare.jpg"
+import weatherImg from "../assets/weather-app.jpg";
+import glowImg from "../assets/glow-skincare.jpg";
 
 const projects = [
   {
     title: "Weather Forecast App",
-    description: "A responsive weather application that displays live weather information.",
-    tech: "React, JavaScript, Weather API",
+    description:
+      "A responsive weather application that displays live weather information using a weather API.",
+    tech: "React • JavaScript • Weather API",
     image: weatherImg,
-    liveLink: "#",
-    codeLink: "#",
+    alt: "Screenshot of the Weather Forecast App interface",
+    liveLink: "https://bigtrevor1234.github.io/weather_projectupdate/",
+    codeLink: "https://bigtrevor1234.github.io/weather_projectupdate/",
   },
   {
     title: "Glow Skincare",
-    description: "A responsive skincare website showcasing products and modern UI design.",
-    tech: "React, Vercel",
+    description:
+      "A responsive skincare website showcasing premium products with a modern and elegant user interface.",
+    tech: "React • Vercel",
     image: glowImg,
-    liveLink: "#",
-    codeLink: "#",
+    alt: "Homepage of the Glow Skincare website",
+    liveLink: "https://glow-skincare-six.vercel.app",
+    codeLink: "https://github.com/bigtrevor1234/glow-skincare",
   },
-]
+];
 
 function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center px-4 py-20 bg-white"
+      className="py-20 bg-gray-50"
     >
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-6xl mx-auto px-6">
 
-        <h2 className="text-2xl font-bold mb-6 text-gray-900">
-          Projects
+        {/* Heading */}
+        <h2 className="text-4xl font-bold text-center text-gray-900">
+          Featured Projects
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <p className="text-center text-gray-600 mt-4 mb-12 max-w-2xl mx-auto">
+          Here are some of the projects I've built to strengthen my skills in
+          modern web development and responsive design.
+        </p>
+
+        {/* Projects Grid */}
+        <div className="grid gap-8 md:grid-cols-2">
+
           {projects.map((project) => (
             <div
               key={project.title}
-              className="border rounded-lg p-4 shadow-md hover:shadow-xl transition duration-300"
+              className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
             >
+
+              {/* Project Image */}
               <img
                 src={project.image}
-                alt={project.title}
-                className="rounded mb-3"
+                alt={project.alt}
+                className="w-full h-56 object-cover"
               />
 
-              <h3 className="font-semibold text-lg">
-                {project.title}
-              </h3>
+              {/* Content */}
+              <div className="p-6">
 
-              <p className="text-sm mt-2 text-gray-600">
-                {project.description}
-              </p>
+                <h3 className="text-2xl font-semibold text-gray-900">
+                  {project.title}
+                </h3>
 
-              <p className="text-xs mt-2 text-gray-500">
-                {project.tech}
-              </p>
+                <p className="mt-3 text-gray-600 leading-relaxed">
+                  {project.description}
+                </p>
 
-              <div className="flex justify-center gap-4 mt-4">
-                <a
-                  href={project.liveLink}
-                  className="text-blue-600 hover:underline"
-                >
-                  Live
-                </a>
+                <span className="inline-block mt-4 px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">
+                  {project.tech}
+                </span>
 
-                <a
-                  href={project.codeLink}
-                  className="text-blue-600 hover:underline"
-                >
-                  Code
-                </a>
+                {/* Buttons */}
+                <div className="flex gap-4 mt-6">
+
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300"
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href={project.codeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center border border-blue-600 text-blue-600 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300"
+                  >
+                    View Code
+                  </a>
+
+                </div>
+
               </div>
+
             </div>
           ))}
+
         </div>
 
       </div>
     </section>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
