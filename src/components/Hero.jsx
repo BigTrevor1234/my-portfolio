@@ -1,7 +1,7 @@
 function Hero() {
   return (
     <section className="min-h-screen flex flex-col items-center justify-center text-center px-4 pt-20 bg-gray-50">
-      
+
       {/* Availability Badge */}
       <span className="inline-flex items-center gap-2 bg-green-100 text-green-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
@@ -31,13 +31,14 @@ function Hero() {
         </a>
 
         <a
-          href="/resume.pdf"
+          href="/Sheriff-Opatola-Resume.pdf"
           download
           className="px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300"
         >
           Download Resume
         </a>
       </div>
+
     </section>
   );
 }
